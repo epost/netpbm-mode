@@ -1,0 +1,29 @@
+#+title:NetPBM mode
+
+An Emacs major mode for editing NetPBM Graphics files. NetPBM is an ASCII file format for specifying raster graphics, see https://en.wikipedia.org/wiki/Netpbm_format.
+
+* Example sprite in NetPBM
+
+This sprite was taken from my [[https://github.com/epost/c64-game][Commodore 64 space shooter game]].
+
+#+BEGIN_SRC pbm
+  P1
+  24 10
+  1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0
+  1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
+  0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+  0 0 1 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 0
+  0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0
+  0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+#+END_SRC
+
+[[./examples/sprite-ship.P1.pbm]]
+
+* Features to be added
+
+- [ ] org-babel backend
+- [ ] support ~P2~ ... ~P7~ formats
