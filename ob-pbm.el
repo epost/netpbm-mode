@@ -54,12 +54,21 @@
      vars)
     body))
 
+
+
 (defun org-babel-execute:pbm (body params)
   "Execute a block of Pbm code with org-babel.
 This function is called by `org-babel-execute-src-block'."
   (let* ((result-params (cdr (assoc :result-params params)))
 	 (out-file (cdr (or (assoc :file params)
 			    (error "You need to specify a :file parameter"))))
+
+         (widthOrNil (cdr (assoc :width params)))
+         (width (if widthOrNil (number-to-string widthOrNil) ""))
+         (heightOrNil (cdr (assoc :height params)))
+         (height (if heightOrNil (number-to-string heightOrNil) ""))
+         (scale (if (or widthOrNil heightOrNil) (concat "-scale " width "x" height) ""))
+
 	 (cmdline (or (cdr (assoc :cmdline params))))
 	 (cmd (or (cdr (assoc :cmd params)) "convert"))
 	 (in-file (org-babel-temp-file "pbm-")))
@@ -68,7 +77,7 @@ This function is called by `org-babel-execute-src-block'."
     (org-babel-eval
      (concat cmd
 	     " -negate"
-             " -scale 400"
+             " " scale
 ;;           " -fill 'rgb(80,80,80)' -opaque white"
 	     " " cmdline
 	     " " (org-babel-process-file-name in-file)

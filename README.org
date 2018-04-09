@@ -6,7 +6,7 @@ An Emacs major mode for editing NetPBM Graphics files. NetPBM is an ASCII file f
 
 This sprite was taken from my [[https://github.com/epost/c64-game][Commodore 64 space shooter game]].
 
-#+BEGIN_SRC pbm :file ship-generated.png :export both
+#+BEGIN_SRC pbm :file ship-generated.png :export both :width 200
 P1
 24 12
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
