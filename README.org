@@ -6,24 +6,31 @@ An Emacs major mode for editing NetPBM Graphics files. NetPBM is an ASCII file f
 
 This sprite was taken from my [[https://github.com/epost/c64-game][Commodore 64 space shooter game]].
 
-#+BEGIN_SRC pbm
-  P1
-  24 10
-  1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-  1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-  1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-  0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0
-  1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
-  0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-  0 0 1 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 0
-  0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0
-  0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-  1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+#+BEGIN_SRC pbm :file ship-generated.png :export both
+P1
+24 12
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
+0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 1 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 0
+0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0
+0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 #+END_SRC
 
-[[./examples/sprite-ship.P1.pbm]]
+#+RESULTS:
+[[file:ship-generated.png]]
+
+Note: Emacs natively support rendering PBM graphics files: [[./examples/sprite-ship.P1.pbm]]
 
 * Features to be added
 
-- [ ] org-babel backend
+- [X] basic ~P1~ format support
+- [ ] org-babel backends
+  - [X] ob-bpm
 - [ ] support ~P2~ ... ~P7~ formats
